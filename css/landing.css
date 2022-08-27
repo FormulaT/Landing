@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #1472ae, #1b68a1, #1e5e94, #205487, #204a7a, #204877, #1f4573, #1f4370, #1e4875, #1d4d7b, #1c5280, #1b5785);    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+body h1 {
+    text-align: center;
+    float: left;
+    font-size: 1.7rem;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    z-index: 1000;
+}
+form {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 30px;
+    transition: 850ms ease;
+    width: 100%;
+    height: 100%;
+}
+form h2 {
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    font-size: xx-large;
+}
+form .input-field {
+    width: 450px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 7px;
+    transition: 250ms;
+    outline: none;
+    box-shadow: inset 0 0 4px black;
+}
+form .input-field:focus {
+    outline-color: #5884b6;
+    outline-width: 5px;
+    outline-style: solid;
+    outline-offset: 0;
+}
+form input[type="submit"] {
+    width: 450px;
+    height: 60px;
+    background-color: #203853;
+    color: white;
+    border: none;
+    border-bottom: 3px solid white;
+    border-radius: 10px;
+    font-size: x-large;
+    cursor: pointer;
+    transition: 200ms;
+    box-shadow: 0 0 2px black;
+}
+.switch-btn {
+    border: none;
+    border-bottom: 3px solid white;
+    box-shadow: 0 0 2px black;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: #203853;
+    color: white;
+    border-radius: 10px;
+    font-size: large;
+    cursor: pointer;
+    transition: 200ms;
+    margin-left: 10px;
+}
+form input[type="submit"]:hover, .switch-btn:hover {
+    background-color: #0e5988;
+}
+form input[type="submit"]:active, .switch-btn:active {
+    background-color: #184764;
+}
+form p {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    user-select: none;
+    font-size: x-large;
+}
+.grid { 
+    display: grid;
+    width: 100%;
+    height: 50%;
+    grid-gap: 0;
+    grid-template-columns: 450px 450px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* STATES */
+.active {
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+}
+.inactive {
+    left: 50%;
+    top: -100%;
+    transform: translate(-50%, -100%);
+}
